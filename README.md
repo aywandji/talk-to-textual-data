@@ -1,5 +1,6 @@
 # talk-to-textual-data
 An Open Domain Question Answering chat box allowing you to talk to your textual data.
+
 #NLP #BERT #HuggingFace #ODQA #Flask #gunicorn #NLTK #SQL
 
 This application has been designed to allow anyone with low computing resources to index and query textual data using a chat-like interface. The app backend is implemented in Python and uses an Open Domain Question Answering framework to serve the queries. The app frontend is implemented with HTML/CSS/JS.
