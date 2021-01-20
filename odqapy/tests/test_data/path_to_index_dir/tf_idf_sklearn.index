@@ -1,1 +1,0 @@
-{"doc_tf_idf_vectorizer_path": "/home/arnaud/Documents/Datascience/ODQA/odqapy/tests/test_data/path_to_index_dir/doc_tf_idf_vectorizer.joblib", "doc_term_tf_idf_weights_path": "/home/arnaud/Documents/Datascience/ODQA/odqapy/tests/test_data/path_to_index_dir/doc_term_tf_idf_weights.joblib", "doc_db_ids": [1, 2]}

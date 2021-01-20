@@ -1,0 +1,11 @@
+- python=3.6+
+- transformers
+- scikit-learn
+- pytest
+- notebook
+- beautifulsoup4
+- flask
+- gunicorn
+- nltk
+- numpy
+- tensorflow
