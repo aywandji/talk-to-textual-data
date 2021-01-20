@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>OQDA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div id="main-content">
+        <div class="container clearfix">
+            <div class="people-list" id="people-list">
+              <div class="search">
+                <input type="text" placeholder="search" />
+                <i class="fa fa-search"></i>
+              </div>
+              <ul class="list">
+                <li class="clearfix">
+                  <img src="/static/images/wikipedia.png" class="avatar" alt="avatar" />
+                  <div class="about">
+                    <div class="name">Your_website (en)</div>
+                    <div class="status">
+                      <i class="fa fa-circle online"></i> online
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          
+            <div class="chat">
+              <div class="chat-header clearfix">
+                <img src="/static/images/wikipedia.png" class="avatar" alt="avatar" />
+                
+                <div class="chat-about">
+                  <div class="chat-with">Ask Your_website</div>
+                  <div class="chat-num-messages">language: english</div>
+                </div>
+                <!-- <i class="fa fa-star"></i> -->
+              </div> <!-- end chat-header -->
+              
+              <div class="chat-history">
+                <ul>
+                </ul>
+                
+              </div> <!-- end chat-history -->
+              
+              <div class="chat-message clearfix">
+                <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                        
+                <!-- <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-file-image-o"></i> -->
+                
+                <button>Send</button>
+      
+              </div> <!-- end chat-message -->
+              
+            </div> <!-- end chat -->
+          
+        </div> <!-- end container -->
+        <div class="other-answers">
+            <div class="current-question"></div>
+            <div class="current-answers"></div>
+
+        </div>
+    </div>
+    
+
+{% raw %}
+<script id="message-template" type="text/x-handlebars-template">
+  <li class="clearfix">
+    <div class="message-data align-right">
+      <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
+      <span class="message-data-name" >You</span> <i class="fa fa-circle me"></i>
+    </div>
+    <div class="message other-message float-right">
+      {{messageOutput}}
+    </div>
+  </li>
+</script>
+
+<script id="message-response-template" type="text/x-handlebars-template">
+  <li>
+    <div class="message-data">
+      <span class="message-data-name"><i class="fa fa-circle online"></i> Your_website</span>
+      <span class="message-data-time">{{time}}, Today</span>
+    </div>
+    <div class="message my-message">
+      <span class="message-data-answer">{{answer}}</span>
+      <p class="message-data-context">{{context}}.
+      <a class="message-data-link" href="{{doc_id}}">{{doc_id}}</a></p> 
+    </div>
+  </li>
+</script>
+
+<script id="current-question-template" type="text/x-handlebars-template">
+    <span>Answers for:  <i style="font-style: italic;">{{question}} </i></span>
+    <span class="message-data-time">{{time}}, Today</span>
+</script>
+
+<script id="current-answer-template" type="text/x-handlebars-template">
+    <div class="other-ans">
+        <span>{{answer}}</span>
+        <p class="context">{{context}}.
+        <a class="url" href="{{doc_id}}" target="_blank">{{doc_id}}</a></p> 
+    </div>
+</script>
+{% endraw %}
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
+  <script  src="/static/js/index.js"></script>
+</body>
+
+</html>
